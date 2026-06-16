@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Motion Kala | Professional Video Production Company Nepal</title>
+    <meta name="description" content="Motion Kala - Professional video production company in Nepal. High-profile biography videos, corporate productions, and creative storytelling for leading brands." />
+    <meta name="keywords" content="video production, Nepal, production company, biography videos, corporate videos" />
+    <meta property="og:title" content="Motion Kala | Professional Video Production Company" />
+    <meta property="og:description" content="Professional video production company creating impactful content for leading brands in Nepal" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FFD700;
+            --primary-dark: #FFC107;
+            --black: #000000;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --bg-light: #f5f5f5;
+            --border-light: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.75rem);
+        }
+
+        h2 {
+            font-size: clamp(1.875rem, 4vw, 3.125rem);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 1.875rem);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 50;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo .motion {
+            color: var(--primary);
+        }
+
+        .logo .kala {
+            color: var(--black);
+        }
+
+        .logo .dot {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-call {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            background-color: var(--primary);
+            color: var(--black);
+            font-weight: bold;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .nav-call {
+                display: flex;
+            }
+        }
+
+        .nav-call:hover {
+            background-color: #FFC107;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 24rem;
+            height: 24rem;
+            background: var(--primary);
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 24rem;
+            height: 24rem;
+            background: var(--primary);
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #FFFACD;
+            color: #B8860B;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--black);
+        }
+
+        .btn-primary:hover {
+            background-color: #FFC107;
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--black);
+            background-color: transparent;
+            color: var(--black);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .play-button {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .play-icon {
+            width: 5rem;
+            height: 5rem;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .play-button:hover .play-icon {
+            transform: scale(1.1);
+        }
+
+        /* Clients Section */
+        .clients {
+            padding: 5rem 0;
+            background-color: var(--black);
+            color: var(--white);
+            position: relative;
+        }
+
+        .clients::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24rem;
+            height: 24rem;
+            background: var(--primary);
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.05;
+        }
+
+        .clients .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 .highlight {
+            color: var(--primary);
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: #d1d5db;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .client-card {
+            padding: 2rem;
+            background: linear-gradient(to bottom right, #1a1a1a, var(--black));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .client-icon {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .client-card:hover .client-icon {
+            transform: scale(1.1);
+        }
+
+        .client-name {
+            font-size: 1.125rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .client-card:hover .client-name {
+            color: var(--primary);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            background-color: var(--white);
+            border: 2px solid var(--border-light);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 3.125rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .service-card:hover .service-title {
+            color: var(--primary);
+        }
+
+        .service-description {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content h2 .highlight {
+            color: var(--primary);
+        }
+
+        .about-content p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: var(--black);
+            color: var(--white);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 24rem;
+            height: 24rem;
+            background: var(--primary);
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.05;
+        }
+
+        .contact .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-content {
+            max-width: 42rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-content h2 .highlight {
+            color: var(--primary);
+        }
+
+        .contact-content p {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            margin-bottom: 3rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            padding: 2rem;
+            background: linear-gradient(to bottom right, #1a1a1a, var(--black));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--primary);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            color: var(--primary);
+            margin: 0 auto 1rem;
+        }
+
+        .contact-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            color: #d1d5db;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #FFC107;
+        }
+
+        .contact-info-block {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            color: #9ca3af;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <span class="motion">motion</span><span class="kala">kala</span><span class="dot">.</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#clients">CLIENTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <a href="tel:9863831615" class="nav-call">📞 CALL</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <span class="hero-badge">PROFESSIONAL VIDEO PRODUCTION</span>
+                    <h1>Cinematic <span class="highlight">Storytelling</span> for Nepal</h1>
+                    <p class="hero-description">
+                        Motion Kala creates high-impact video content for leading brands and organizations. From biography videos to corporate productions, we bring your vision to life with professional excellence.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">GET IN TOUCH</a>
+                        <a href="#clients" class="btn btn-secondary">VIEW PORTFOLIO</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663372233121/RZQbofySEgo88S83eVDAM5/hero-cinematic-production-f4nZ8Si6StV3vrHvfWWwib.webp" alt="Production Studio" />
+                    <div class="play-button">
+                        <div class="play-icon">▶</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by <span class="highlight">Leading Brands</span></h2>
+                <p>We've had the privilege of working with Nepal's most respected organizations</p>
+            </div>
+
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-icon">📺</div>
+                    <div class="client-name">Karnali Yaks</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">📺</div>
+                    <div class="client-name">Rastriya Swatantra Party</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">📺</div>
+                    <div class="client-name">Trek Curator</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">📺</div>
+                    <div class="client-name">Aerolink</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">📺</div>
+                    <div class="client-name">Rastriya Prajatantra Party</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">📺</div>
+                    <div class="client-name">Nabil Bank</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-icon">📺</div>
+                    <div class="client-name">Prabhu Insurance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="highlight">Services</span></h2>
+                <p>Comprehensive video production solutions tailored to your needs</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3 class="service-title">Biography Videos</h3>
+                    <p class="service-description">High-profile biography videos that tell compelling personal and professional stories with cinematic quality.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Corporate Productions</h3>
+                    <p class="service-description">Professional corporate videos, documentaries, and promotional content tailored to your brand.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📹</div>
+                    <h3 class="service-title">Commercial Shoots</h3>
+                    <p class="service-description">Creative commercial and advertising content that captures attention and drives engagement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎥</div>
+                    <h3 class="service-title">Event Coverage</h3>
+                    <p class="service-description">Professional event videography and live coverage for conferences, launches, and special occasions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3 class="service-title">Post-Production</h3>
+                    <p class="service-description">Expert editing, color grading, sound design, and visual effects to polish your content.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📖</div>
+                    <h3 class="service-title">Storytelling</h3>
+                    <p class="service-description">Creative narrative development and scriptwriting that brings your vision to life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663372233121/RZQbofySEgo88S83eVDAM5/hero-film-frames-Cbn2AK8AjpnfcxDdieCztm.webp" alt="About Motion Kala" />
+                </div>
+                <div class="about-content">
+                    <h2>About <span class="highlight">Motion Kala</span></h2>
+                    <p>Motion Kala is a professional video production company based in Nepal, dedicated to creating high-quality, impactful video content for leading brands and organizations.</p>
+                    <p>With expertise in biography videos, corporate productions, and creative storytelling, we transform ideas into compelling visual narratives that resonate with audiences.</p>
+                    <p>Our team combines technical excellence with creative vision to deliver productions that exceed expectations and drive real results for our clients.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">7+</div>
+                            <div class="stat-label">Major Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Ready to Create <span class="highlight">Something Amazing?</span></h2>
+                <p>Get in touch with our team to discuss your video production needs and bring your vision to life.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-title">Email</div>
+                        <div class="contact-info">
+                            <a href="mailto:motionkalaofficial@gmail.com">motionkalaofficial@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-title">Phone</div>
+                        <div class="contact-info">
+                            <div class="contact-info-block">
+                                <a href="tel:9863831615">+977 9863831615</a>
+                            </div>
+                            <div class="contact-info-block">
+                                <a href="tel:9867117411">+977 9867117411</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="mailto:motionkalaofficial@gmail.com" class="btn btn-primary">SEND US A MESSAGE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <span class="motion">motion</span><span class="kala">kala</span><span class="dot">.</span>
+                    </div>
+                    <p>Professional video production company in Nepal</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:motionkalaofficial@gmail.com">motionkalaofficial@gmail.com</a></p>
+                    <p>Phone: <a href="tel:9863831615">+977 9863831615</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Motion Kala. All rights reserved. | Professional Video Production Company Nepal</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Play button interaction
+        document.querySelector('.play-button').addEventListener('click', function() {
+            alert('Video player would open here. This is a placeholder.');
+        });
+
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and client cards
+        document.querySelectorAll('.service-card, .client-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
